@@ -1,0 +1,191 @@
+/* Colors */
+
+:root {
+    --primary-color:#00b5e2;
+    --primary-light-color: #64e7ff;
+    --primary-very-light-color: #f5fdff;
+    --primary-dark-color: #0085b0;
+    --secondary-color: #e42e00;
+    --secondary-light-color: #ff6735;
+    --secondary-dark-color: #a90000;
+    --light-color: white;
+    --dark-color: black;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track
+{
+  background-color: var(--light-color);
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: var(--primary-dark-color);
+}
+
+/* Main */
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Agency FB';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: inherit;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+* {
+    box-sizing: border-box;
+}
+
+/* Banner */
+
+.banner {
+    width: 100vw;
+    height: 13vh;
+    padding-right: calc(100vw - 100%);
+    position: absolute;
+    background-color: var(--primary-dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-color);
+    z-index: 5;
+}
+
+.banner_center {
+    width: calc(78vw - (100vw - 100%));
+    height: inherit;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Side */
+
+.side {
+    position: fixed;
+    width: 11vw;
+    height: 100vh;
+    top: 0;
+    background-color: var(--primary-light-color);
+}
+
+.side + .side {
+    right: 0;
+}
+
+#side_nav {
+    position: absolute;
+    width: 11vw;
+    height: 87vh;
+    top: 13vh;
+    background-color: var(--primary-light-color);
+    right: 0;
+    z-index: 2;
+    display: block;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+/* Navigatie */
+
+.nav {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 35%;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.nav li {
+    height: 25%;
+    width: 100%;
+}
+
+.nav li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    font-size: 1.9rem;
+}
+
+.nav li a:hover {
+    background-color: var(--primary-dark-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav .active {
+    background-color: var(--primary-dark-color);
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-light-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Inleiding */
+
+.content {
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inleiding {
+    width: 50vw;
+    text-align: center;
+    margin-top: 23vh;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: var(--primary-very-light-color);
+    border: 5px solid var(--primary-dark-color);
+}
+
+.inleiding h1 {
+    margin: 10px;
+}
+
+.inleiding p {
+    margin: 10px;
+}
+
+.content .img {
+    width: 30%;
+    height: auto;
+    margin-top: 5vh;
+    border-radius: 5px;
+    border: 5px solid var(--primary-dark-color);
+    padding: 5px;
+}

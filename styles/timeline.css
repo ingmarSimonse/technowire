@@ -1,0 +1,127 @@
+/* Timeline */
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    width: 55vw;
+    height: 100%;
+}
+
+.collumn {
+    width: 27.5vw;
+    height: 100%;
+}
+
+.collumn:first-of-type {
+    border-right: 3px solid var(--primary-dark-color);
+}
+
+.collumn + .collumn {
+    border-left: 3px solid var(--primary-dark-color);
+}
+
+.collumn:first-of-type .item:first-of-type {
+    margin-top: 5vw;
+}
+
+.collumn + .collumn .item:first-of-type {
+    margin-top: 17.5vw;
+}
+
+.collumn:first-of-type .item:last-of-type {
+    margin-bottom: 12.5vw;
+}
+
+/* Timeline Item */
+
+.item {
+    width: 27.5vw;
+    height: 27.5vw;
+}
+
+.year {
+    margin: 0;
+    padding: 0 10% 0 10%;
+}
+
+.collumn:first-of-type .year {
+    text-align: end;
+}
+
+.collumn + .collumn {
+    text-align: left;
+}
+
+.item_body {
+    margin: 0 10% 10% 10%;
+    width: 80%;
+    height: 80%;
+    border: 5px solid var(--primary-dark-color);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-very-light-color);
+}
+
+.item_body:hover {
+    box-shadow: var(--primary-dark-color) 0px 4px 12px;
+}
+
+.item_body:hover h2, .item_body:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+}
+
+.item_body_row {
+    width: 50%;
+}
+
+.item_body .item_body_row:first-of-type {
+    border-right: 2px solid var(--primary-dark-color);
+}
+
+.item_body_row + .item_body_row {
+    border-left: 2px solid var(--primary-dark-color);
+}
+
+.item a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: 70%;
+    padding: 10px;
+    object-fit: contain;
+    border-top: 4px solid var(--primary-dark-color);
+}
+
+.item h2 {
+    height: 30%;
+    margin: 0;
+    padding: 20% 0 0 0;
+    font-size: 1.7rem;
+}
+
+.item_body .p {
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid var(--primary-dark-color);
+}
+
+.item_body b {
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.item h3 {
+    margin: 0;
+    padding: 20% 0 0 0;
+}
